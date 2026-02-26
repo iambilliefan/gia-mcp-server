@@ -1,10 +1,27 @@
 # GIA MCP Server
 
+[![npm version](https://img.shields.io/npm/v/gia-mcp-server)](https://www.npmjs.com/package/gia-mcp-server)
+[![License](https://img.shields.io/badge/license-proprietary-blue)](LICENSE)
+[![Node](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](https://nodejs.org)
+[![MCP](https://img.shields.io/badge/protocol-MCP-purple)](https://modelcontextprotocol.io)
+
 **Governance Intelligence Architecture** — the governance layer for Claude AI agents.
 
 This package connects [Claude Desktop](https://claude.ai/download) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code) to the hosted GIA governance engine, giving your AI workflows enterprise-grade governance: decision classification, forensic audit trails, human-in-the-loop gates, compliance mapping, and more.
 
 Built on Anthropic's [Model Context Protocol](https://modelcontextprotocol.io).
+
+## Why GIA?
+
+AI agents are powerful — but **ungoverned AI agents are a liability**. GIA solves this by providing:
+
+- **Decision Classification** — Every AI decision is classified as Mandatory (human required), Advisory (human optional), or Informational (agent autonomous)
+- **Forensic Audit Trail** — Hash-chained, tamper-evident ledger of every operation, decision, and gate approval
+- **Human-in-the-Loop Gates** — High-impact actions require explicit human approval before execution
+- **Compliance Mapping** — Map governance controls to NIST AI RMF, EU AI Act, ISO 42001, and NIST 800-53
+- **Governed Memory** — Hash-sealed knowledge packs with trust levels, TTL, and role-based access
+
+GIA is the governance layer that makes Claude deployments enterprise-ready.
 
 ## Quick Start
 
