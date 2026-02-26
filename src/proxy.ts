@@ -12,7 +12,7 @@
  *   Claude <--stdio--> this proxy <--HTTPS--> gia.aceadvising.com/mcp
  *
  * @author ACE Advising
- * @version 0.2.0
+ * @version 0.2.1
  */
 
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
