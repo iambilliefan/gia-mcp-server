@@ -1,0 +1,56 @@
+{
+  "name": "gia-mcp-server",
+  "version": "0.2.0",
+  "description": "MCP proxy for GIA Governance — connects Claude Desktop and Claude Code to the hosted GIA governance engine.",
+  "author": {
+    "name": "William J. Storey III",
+    "url": "https://github.com/aceadvising"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "main": "dist/proxy.js",
+  "types": "dist/proxy.d.ts",
+  "bin": {
+    "gia-mcp-server": "bin/gia-mcp-server.js"
+  },
+  "files": [
+    "dist/proxy.js",
+    "dist/proxy.d.ts",
+    "bin/",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "anthropic",
+    "claude",
+    "governance",
+    "ai-safety",
+    "compliance",
+    "audit",
+    "human-in-the-loop",
+    "forensic-ledger"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knowledgepa3/gia-mcp-server"
+  },
+  "homepage": "https://gia.aceadvising.com",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/proxy.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}

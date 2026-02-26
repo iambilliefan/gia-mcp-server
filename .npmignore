@@ -1,0 +1,15 @@
+src/
+tests/
+tsconfig.json
+.git/
+.github/
+.gitignore
+.vscode/
+.idea/
+.DS_Store
+.env
+.env.*
+package-lock.json
+node_modules/
+*.js.map
+*.tsbuildinfo
