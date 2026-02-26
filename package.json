@@ -6,7 +6,7 @@
     "name": "William J. Storey III",
     "url": "https://github.com/aceadvising"
   },
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "Proprietary",
   "type": "module",
   "main": "dist/proxy.js",
   "types": "dist/proxy.d.ts",

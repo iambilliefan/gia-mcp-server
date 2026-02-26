@@ -139,4 +139,4 @@ This package is a lightweight proxy. All governance logic runs on the hosted GIA
 
 Proprietary. See [LICENSE](LICENSE) for details.
 
-Copyright (c) 2025-2026 William J. Storey III / ACE Advising
+Copyright (c) 2025-2026 William J. Storey III / Advanced Consulting Experts (ACE)

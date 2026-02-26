@@ -11,7 +11,7 @@
  * Architecture:
  *   Claude <--stdio--> this proxy <--HTTPS--> gia.aceadvising.com/mcp
  *
- * @author ACE Advising
+ * @author Advanced Consulting Experts (ACE)
  * @version 0.2.1
  */
 
