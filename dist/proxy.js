@@ -108,9 +108,25 @@ async function main() {
         if (!upstreamConnected || !upstream) {
             // Try to reconnect on demand
             await connectUpstream(apiKey, serverUrl);
-            if (!upstreamConnected || !upstream) {
-                throw new Error('GIA upstream server is not reachable. Check your GIA_API_KEY and network connection. ' +
-                    `Server URL: ${serverUrl}`);
+        }
+        // When disconnected, return empty results for discovery methods
+        // so health checks and tool listing still work
+        if (!upstreamConnected || !upstream) {
+            const disconnectedMsg = `[GIA disconnected] Connect to ${serverUrl} with a valid GIA_API_KEY to enable tools.`;
+            switch (method) {
+                case 'tools/list':
+                    return { tools: [{ name: 'gia_system_status', description: disconnectedMsg, inputSchema: { type: 'object', properties: {} } }] };
+                case 'resources/list':
+                    return { resources: [] };
+                case 'resources/templates/list':
+                    return { resourceTemplates: [] };
+                case 'prompts/list':
+                    return { prompts: [] };
+                case 'logging/setLevel':
+                    return {};
+                default:
+                    throw new Error('GIA upstream server is not reachable. Check your GIA_API_KEY and network connection. ' +
+                        `Server URL: ${serverUrl}`);
             }
         }
         const result = await upstream.request({ method, params }, schema);
