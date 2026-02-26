@@ -2,6 +2,18 @@
 
 All notable changes to GIA MCP Server will be documented in this file.
 
+## [0.2.2] - 2026-02-26
+
+### Fixed
+- Proxy no longer crashes when upstream GIA server is unreachable
+- Server stays alive in disconnected mode — returns clear errors on tool calls
+- Local ping responses keep health checks passing (Glama, monitoring)
+- Lazy reconnect: automatically retries upstream on next tool call
+
+### Changed
+- Stdio transport starts before upstream connection (resilient startup order)
+- Upstream connection failure is now WARNING, not FATAL
+
 ## [0.2.0] - 2026-02-25
 
 ### Changed
