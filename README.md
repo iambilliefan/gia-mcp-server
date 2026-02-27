@@ -1,7 +1,7 @@
 # GIA MCP Server
 
 [![npm version](https://img.shields.io/npm/v/gia-mcp-server)](https://www.npmjs.com/package/gia-mcp-server)
-[![License](https://img.shields.io/badge/license-proprietary-blue)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](https://nodejs.org)
 [![MCP](https://img.shields.io/badge/protocol-MCP-purple)](https://modelcontextprotocol.io)
 
@@ -141,6 +141,6 @@ This package is a lightweight proxy. All governance logic runs on the hosted GIA
 
 ## License
 
-Proprietary. See [LICENSE](LICENSE) for details.
+MIT. See [LICENSE](LICENSE) for details.
 
 Copyright (c) 2025-2026 William J. Storey III / Advanced Consulting Experts (ACE)
